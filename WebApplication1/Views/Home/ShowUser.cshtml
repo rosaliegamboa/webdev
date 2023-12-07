@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "ShowUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var userList = (IEnumerable<user>)ViewData["UserList"];
+}
+
+
+
+<h2>Show User</h2>
+<table border="1">
+    @{
+        foreach (var item in userList)
+        {
+            <tr>
+                <td style="padding: 20px;">@item.firstName</td>
+                <td style="padding: 20px;">@item.lastName</td>
+                <td style="padding: 20px;">@item.email</td>
+                <td style="padding: 20px;">@item.password</td>
+            </tr>
+        }
+
+
+    }
+</table>
