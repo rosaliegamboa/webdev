@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var userList = (IEnumerable<user>)ViewData["User"];
+
+}
+<style>
+
+
+    form {
+        display: block;
+        border: 2px solid;
+        height: 80%;
+        width: 30%;
+        border-radius: 20px;
+        padding: 30px;
+        padding: 10px;
+        box-shadow: 5px 10px #888888;
+    }
+
+    .btn {
+        padding: 10px;
+        margin-top: 20px;
+        display: block;
+    }
+</style>
+<br />
+<h2> </h2>
+
+@{
+    foreach (var use in userList)
+    {
+        <BR /> <BR /> <BR /> <BR /> <BR />
+        <center>
+            <form action="Update" method="post">
+                <div class="mb-5">
+                    <input type="hidden" name="id" value="@use.userId" />
+                    <label for="firstname" class="form-label">Firstname:</label>
+                    <input type="text" class="form-control" id="firstname" name="new_firstname" value="@use.firstName" required>
+                </div>
+                <div class="mb-5">
+                    <label for="lastname" class="form-label">Lastname:</label>
+                    <input type="text" class="form-control" id="lastname" name="new_lastname" value="@use.lastName" required>
+                </div>
+                <div class="mb-5">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" name="new_email" value="@use.email" required>
+                </div>
+                <div class="mb-5">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="password" name="new_password" value="@use.password" required>
+                </div>
+                <br />
+                <button type="submit" class="btn btn-primary">Click here if its already changed!</button>
+            </form>
+        </center>
+    }
+}
