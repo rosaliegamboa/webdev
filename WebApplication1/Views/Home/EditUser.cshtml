@@ -9,16 +9,18 @@
 
     form {
         display: block;
-        border: 2px solid;
-        height: 80%;
+        border: 2px solid #8D6E57;
+        height: 44vh;
         width: 30%;
         border-radius: 20px;
         padding: 30px;
         padding: 10px;
-        box-shadow: 5px 10px #888888;
+        box-shadow: 5px 10px #8D6E57;
+        font-family: Bahnschrift;
+        font-size: 20px;
     }
 
-    .btn {
+    btn {
         padding: 10px;
         margin-top: 20px;
         display: block;
@@ -30,11 +32,11 @@
 @{
     foreach (var use in userList)
     {
-        <BR /> <BR /> <BR /> <BR /> <BR />
+        <br><br><br><br><br>
         <center>
             <form action="Update" method="post">
                 <div class="mb-5">
-                    <input type="hidden" name="id" value="@use.userId" />
+                    <input type="hidden" name="id" value="@use.userId" /> <br />
                     <label for="firstname" class="form-label">Firstname:</label>
                     <input type="text" class="form-control" id="firstname" name="new_firstname" value="@use.firstName" required>
                 </div>
@@ -51,7 +53,7 @@
                     <input type="password" class="form-control" id="password" name="new_password" value="@use.password" required>
                 </div>
                 <br />
-                <button type="submit" class="btn btn-primary">Click here if its already changed!</button>
+                <button type="submit" class="btn btn-primary">Update</button>
             </form>
         </center>
     }

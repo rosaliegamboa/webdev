@@ -9,32 +9,63 @@
 <style>
     th {
         color: saddlebrown;
-        font-size: 19px;
-        text-shadow: 1px 1px #8B4513;
+        font-size: 18px;
+        text-shadow: 1px 0px #8B4513;
+        border: 1px solid black;
+        text-align: center;
+        padding: 15px;
+    }
+
+    tr {
+        border: 1px solid black;
+    }
+
+    td {
+        padding: 15px;
     }
 
     button {
         background-color: #8D6E57;
         color: white;
-        padding: 5px 50px;
+        padding: 10px 20px;
         border: none;
         border-radius: 4px;
         cursor: pointer;
-        margin-right: 5px;
+        box-shadow: 2px 2px 5px #654632;
+        font-size: 14px;
     }
 
-        button:hover {
-            background-color: #B5651D;
-        }
 
-        form{
-            padding: 5px;
+    button:hover {
+        background-color: #B5651D;
+    }
 
-        }
+    form {
+        display: inline-block;
+    }
+
+    h2 {
+        color: #8D6E57;
+        text-shadow: 1px 1px 2px #654632;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    .action-buttons {
+        text-align: center;
+    }
 </style>
 
 
-<h2>Show User</h2>
+<h2 style="text-align: center; margin-top: 50px;">Show User</h2>
 <table border="1">
     <tr>
         <th style="padding: 20px;">First Name</th>
